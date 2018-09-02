@@ -4,6 +4,10 @@ Declarative, testable data source of UICollectionView and UITableView.
 
 ![](Screenshot/declarative.png)
 
+## Installation
+
+Add a line `github "ishkawa/DataSourceKit"` to your Cartfile and run `carthage update`.
+
 ## Usage
 
 ### Define kinds of cells in CellDeclaration
