@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="824-F7-ina" customClass="VenueOutlineCell" customModule="Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="385"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="385"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kaminarimon_at_night" translatesAutoresizingMaskIntoConstraints="NO" id="2vI-Li-6hj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2vI-Li-6hj" secondAttribute="height" multiplier="16:9" id="c90-ws-Pgo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaminarimon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5C-mD-3K9">
+                        <rect key="frame" x="16" y="227" width="191.5" height="38.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taito, Tokyo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYz-JK-Vpy">
+                        <rect key="frame" x="16" y="265.5" width="72.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49g-fg-cpN">
+                        <rect key="frame" x="16" y="297.5" width="343" height="67"/>
+                        <string key="text">The Kaminarimon (雷門 "Thunder Gate") is the outer of two large entrance gates that ultimately leads to the Sensō-ji (the inner being the Hōzōmon) in Asakusa, Tokyo, Japan.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="49g-fg-cpN" firstAttribute="leading" secondItem="824-F7-ina" secondAttribute="leading" constant="16" id="0iM-5F-Prh"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="49g-fg-cpN" secondAttribute="bottom" constant="8" id="8It-RI-HBf"/>
+                <constraint firstItem="v5C-mD-3K9" firstAttribute="top" secondItem="2vI-Li-6hj" secondAttribute="bottom" constant="16" id="9fh-PF-cAe"/>
+                <constraint firstItem="2vI-Li-6hj" firstAttribute="leading" secondItem="824-F7-ina" secondAttribute="leading" id="EhC-N4-fDG"/>
+                <constraint firstItem="eYz-JK-Vpy" firstAttribute="leading" secondItem="824-F7-ina" secondAttribute="leading" constant="16" id="Ihm-RS-7qw"/>
+                <constraint firstItem="49g-fg-cpN" firstAttribute="top" secondItem="eYz-JK-Vpy" secondAttribute="bottom" constant="16" id="KIB-Yc-Mtt"/>
+                <constraint firstItem="v5C-mD-3K9" firstAttribute="leading" secondItem="824-F7-ina" secondAttribute="leading" constant="16" id="LBv-6f-v20"/>
+                <constraint firstItem="eYz-JK-Vpy" firstAttribute="top" secondItem="v5C-mD-3K9" secondAttribute="bottom" id="dEa-Zc-Fbe"/>
+                <constraint firstAttribute="trailing" secondItem="49g-fg-cpN" secondAttribute="trailing" constant="16" id="eXF-N5-7sl"/>
+                <constraint firstItem="2vI-Li-6hj" firstAttribute="top" secondItem="824-F7-ina" secondAttribute="top" id="jUY-ZS-ndV"/>
+                <constraint firstAttribute="trailing" secondItem="2vI-Li-6hj" secondAttribute="trailing" id="xKo-1g-0Aw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="6f9-oP-0LD"/>
+            <size key="customSize" width="306" height="388"/>
+            <connections>
+                <outlet property="nameLabel" destination="v5C-mD-3K9" id="8Y7-xo-Ije"/>
+                <outlet property="photoImageView" destination="2vI-Li-6hj" id="TYp-cd-7SN"/>
+            </connections>
+            <point key="canvasLocation" x="44" y="192.05397301349328"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Kaminarimon_at_night" width="266" height="179"/>
+    </resources>
+</document>

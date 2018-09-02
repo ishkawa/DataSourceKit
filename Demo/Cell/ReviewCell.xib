@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AUe-SC-Sia" customClass="ReviewCell" customModule="Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eei-2e-KgB">
+                        <rect key="frame" x="16" y="8" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="1Cz-W3-9yL"/>
+                            <constraint firstAttribute="width" constant="40" id="r4g-7a-aUa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yosuke Ishikawa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGN-Re-kme">
+                        <rect key="frame" x="67" y="8" width="120.5" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-2t-naW">
+                        <rect key="frame" x="67" y="30" width="292" height="50.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dSl-2t-naW" secondAttribute="bottom" constant="8" id="3hc-tb-lNh"/>
+                <constraint firstItem="oGN-Re-kme" firstAttribute="top" secondItem="Eei-2e-KgB" secondAttribute="top" id="5Uv-Qd-SmH"/>
+                <constraint firstItem="dSl-2t-naW" firstAttribute="top" secondItem="oGN-Re-kme" secondAttribute="bottom" constant="4" id="HFE-Fp-knE"/>
+                <constraint firstItem="Eei-2e-KgB" firstAttribute="top" secondItem="AUe-SC-Sia" secondAttribute="top" constant="8" id="HMV-NB-a9D"/>
+                <constraint firstItem="dSl-2t-naW" firstAttribute="leading" secondItem="oGN-Re-kme" secondAttribute="leading" id="gHr-ik-JzH"/>
+                <constraint firstItem="oGN-Re-kme" firstAttribute="leading" secondItem="Eei-2e-KgB" secondAttribute="trailing" constant="11" id="iQK-LT-pUw"/>
+                <constraint firstItem="Eei-2e-KgB" firstAttribute="leading" secondItem="AUe-SC-Sia" secondAttribute="leading" constant="16" id="mSC-Jz-1Zh"/>
+                <constraint firstAttribute="trailing" secondItem="dSl-2t-naW" secondAttribute="trailing" constant="16" id="vll-Fr-NR9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="yQA-7Y-vCT"/>
+            <size key="customSize" width="375" height="95"/>
+            <connections>
+                <outlet property="authorImageView" destination="Eei-2e-KgB" id="9Cw-du-QxS"/>
+                <outlet property="authorNameLabel" destination="oGN-Re-kme" id="Hs7-as-anE"/>
+                <outlet property="bodyLabel" destination="dSl-2t-naW" id="GAw-bd-n3U"/>
+            </connections>
+            <point key="canvasLocation" x="45.600000000000001" y="165.96701649175412"/>
+        </collectionViewCell>
+    </objects>
+</document>
