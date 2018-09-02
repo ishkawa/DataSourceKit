@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		7FB64C00213B552B0071FC26 /* DataSourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB64BF6213B552B0071FC26 /* DataSourceKit.framework */; };
-		7FB64C05213B552B0071FC26 /* DataSourceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C04213B552B0071FC26 /* DataSourceKitTests.swift */; };
 		7FB64C07213B552B0071FC26 /* DataSourceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FB64BF9213B552B0071FC26 /* DataSourceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FB64C11213B55830071FC26 /* CellsDeclarator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C10213B55830071FC26 /* CellsDeclarator.swift */; };
+		7FB64C13213B55CB0071FC26 /* CellBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C12213B55CB0071FC26 /* CellBinder.swift */; };
+		7FB64C15213B56630071FC26 /* BindableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C14213B56630071FC26 /* BindableCell.swift */; };
+		7FB64C17213B56E20071FC26 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C16213B56E20071FC26 /* CollectionViewDataSource.swift */; };
+		7FB64C19213B58E40071FC26 /* CollectionViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C18213B58E40071FC26 /* CollectionViewDataSourceTests.swift */; };
+		7FB64C1B213B59300071FC26 /* TestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C1A213B59300071FC26 /* TestCollectionView.swift */; };
+		7FB64C1D213B5BC20071FC26 /* TestCellA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C1C213B5BC20071FC26 /* TestCellA.swift */; };
+		7FB64C1F213B5BC80071FC26 /* TestCellB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C1E213B5BC80071FC26 /* TestCellB.swift */; };
+		7FB64C21213B5BD90071FC26 /* TestCellA.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB64C20213B5BD90071FC26 /* TestCellA.xib */; };
+		7FB64C23213B5C0A0071FC26 /* TestCellB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB64C22213B5C0A0071FC26 /* TestCellB.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +36,17 @@
 		7FB64BF9213B552B0071FC26 /* DataSourceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceKit.h; sourceTree = "<group>"; };
 		7FB64BFA213B552B0071FC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FB64BFF213B552B0071FC26 /* DataSourceKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataSourceKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FB64C04213B552B0071FC26 /* DataSourceKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceKitTests.swift; sourceTree = "<group>"; };
 		7FB64C06213B552B0071FC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FB64C10213B55830071FC26 /* CellsDeclarator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsDeclarator.swift; sourceTree = "<group>"; };
+		7FB64C12213B55CB0071FC26 /* CellBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBinder.swift; sourceTree = "<group>"; };
+		7FB64C14213B56630071FC26 /* BindableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableCell.swift; sourceTree = "<group>"; };
+		7FB64C16213B56E20071FC26 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		7FB64C18213B58E40071FC26 /* CollectionViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceTests.swift; sourceTree = "<group>"; };
+		7FB64C1A213B59300071FC26 /* TestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionView.swift; sourceTree = "<group>"; };
+		7FB64C1C213B5BC20071FC26 /* TestCellA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCellA.swift; sourceTree = "<group>"; };
+		7FB64C1E213B5BC80071FC26 /* TestCellB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCellB.swift; sourceTree = "<group>"; };
+		7FB64C20213B5BD90071FC26 /* TestCellA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCellA.xib; sourceTree = "<group>"; };
+		7FB64C22213B5C0A0071FC26 /* TestCellB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCellB.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				7FB64BF9213B552B0071FC26 /* DataSourceKit.h */,
+				7FB64C10213B55830071FC26 /* CellsDeclarator.swift */,
+				7FB64C16213B56E20071FC26 /* CollectionViewDataSource.swift */,
+				7FB64C12213B55CB0071FC26 /* CellBinder.swift */,
+				7FB64C14213B56630071FC26 /* BindableCell.swift */,
 				7FB64BFA213B552B0071FC26 /* Info.plist */,
 			);
 			path = DataSourceKit;
@@ -80,7 +102,12 @@
 		7FB64C03213B552B0071FC26 /* DataSourceKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				7FB64C04213B552B0071FC26 /* DataSourceKitTests.swift */,
+				7FB64C1A213B59300071FC26 /* TestCollectionView.swift */,
+				7FB64C20213B5BD90071FC26 /* TestCellA.xib */,
+				7FB64C1C213B5BC20071FC26 /* TestCellA.swift */,
+				7FB64C22213B5C0A0071FC26 /* TestCellB.xib */,
+				7FB64C1E213B5BC80071FC26 /* TestCellB.swift */,
+				7FB64C18213B58E40071FC26 /* CollectionViewDataSourceTests.swift */,
 				7FB64C06213B552B0071FC26 /* Info.plist */,
 			);
 			path = DataSourceKitTests;
@@ -148,6 +175,7 @@
 				TargetAttributes = {
 					7FB64BF5213B552B0071FC26 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					7FB64BFE213B552B0071FC26 = {
 						CreatedOnToolsVersion = 10.0;
@@ -184,6 +212,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB64C23213B5C0A0071FC26 /* TestCellB.xib in Resources */,
+				7FB64C21213B5BD90071FC26 /* TestCellA.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB64C15213B56630071FC26 /* BindableCell.swift in Sources */,
+				7FB64C11213B55830071FC26 /* CellsDeclarator.swift in Sources */,
+				7FB64C13213B55CB0071FC26 /* CellBinder.swift in Sources */,
+				7FB64C17213B56E20071FC26 /* CollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB64C05213B552B0071FC26 /* DataSourceKitTests.swift in Sources */,
+				7FB64C1F213B5BC80071FC26 /* TestCellB.swift in Sources */,
+				7FB64C1D213B5BC20071FC26 /* TestCellA.swift in Sources */,
+				7FB64C1B213B59300071FC26 /* TestCollectionView.swift in Sources */,
+				7FB64C19213B58E40071FC26 /* CollectionViewDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +378,7 @@
 		7FB64C0B213B552B0071FC26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.ishkawa.DataSourceKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +404,7 @@
 		7FB64C0C213B552B0071FC26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +429,7 @@
 		7FB64C0E213B552B0071FC26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DataSourceKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +447,7 @@
 		7FB64C0F213B552B0071FC26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DataSourceKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
