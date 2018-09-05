@@ -11,7 +11,6 @@
 		7F9AEDAD213BBBA10092854F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDAC213BBBA10092854F /* AppDelegate.swift */; };
 		7F9AEDB4213BBBA30092854F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9AEDB3213BBBA30092854F /* Assets.xcassets */; };
 		7F9AEDB7213BBBA30092854F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9AEDB5213BBBA30092854F /* LaunchScreen.storyboard */; };
-		7F9AEDC2213BBBA30092854F /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDC1213BBBA30092854F /* DemoTests.swift */; };
 		7F9AEDCF213BBC280092854F /* CollectionViewFullWidthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDCC213BBC280092854F /* CollectionViewFullWidthCell.swift */; };
 		7F9AEDDE213BBC390092854F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD1213BBC390092854F /* Review.swift */; };
 		7F9AEDDF213BBC390092854F /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD2213BBC390092854F /* Venue.swift */; };
@@ -47,6 +46,8 @@
 		7FC38D31213FA8BC009FCEB1 /* BTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D30213FA8BC009FCEB1 /* BTableViewCell.swift */; };
 		7FC38D33213FA908009FCEB1 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D32213FA908009FCEB1 /* TableViewDataSourceTests.swift */; };
 		7FC38D35213FA917009FCEB1 /* TestTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D34213FA917009FCEB1 /* TestTableView.swift */; };
+		7FC38D39213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D38213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift */; };
+		7FC38D3B213FACE8009FCEB1 /* DataSourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB64BF6213B552B0071FC26 /* DataSourceKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +96,6 @@
 		7F9AEDB6213BBBA30092854F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F9AEDB8213BBBA30092854F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F9AEDBD213BBBA30092854F /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F9AEDC1213BBBA30092854F /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
 		7F9AEDC3213BBBA30092854F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F9AEDCC213BBC280092854F /* CollectionViewFullWidthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewFullWidthCell.swift; sourceTree = "<group>"; };
 		7F9AEDD1213BBC390092854F /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -133,6 +133,7 @@
 		7FC38D30213FA8BC009FCEB1 /* BTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTableViewCell.swift; sourceTree = "<group>"; };
 		7FC38D32213FA908009FCEB1 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		7FC38D34213FA917009FCEB1 /* TestTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableView.swift; sourceTree = "<group>"; };
+		7FC38D38213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuDetailViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC38D3B213FACE8009FCEB1 /* DataSourceKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +188,7 @@
 		7F9AEDC0213BBBA30092854F /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				7F9AEDC1213BBBA30092854F /* DemoTests.swift */,
+				7FC38D38213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift */,
 				7F9AEDC3213BBBA30092854F /* Info.plist */,
 			);
 			path = DemoTests;
@@ -234,6 +236,7 @@
 				7F9AEDAB213BBBA10092854F /* Demo */,
 				7F9AEDC0213BBBA30092854F /* DemoTests */,
 				7FB64BF7213B552B0071FC26 /* Products */,
+				7FC38D3A213FACE8009FCEB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,6 +301,13 @@
 				7FC38D34213FA917009FCEB1 /* TestTableView.swift */,
 			);
 			path = TestView;
+			sourceTree = "<group>";
+		};
+		7FC38D3A213FACE8009FCEB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,7 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F9AEDC2213BBBA30092854F /* DemoTests.swift in Sources */,
+				7FC38D39213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
