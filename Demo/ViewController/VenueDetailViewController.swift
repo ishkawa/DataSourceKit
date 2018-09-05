@@ -77,7 +77,7 @@ final class VenueDetailViewController: UIViewController {
         super.viewDidLoad()
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         collectionView.dataSource = dataSource
 
         data = Data(
