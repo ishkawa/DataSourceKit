@@ -1,8 +1,8 @@
 //
-//  CollectionViewDataSourceTests.swift
+//  TableViewDataSourceTests.swift
 //  DataSourceKitTests
 //
-//  Created by Yosuke Ishikawa on 2018/09/02.
+//  Created by Yosuke Ishikawa on 2018/09/05.
 //  Copyright © 2018年 Yosuke Ishikawa. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 import DataSourceKit
 
-class CollectionViewDataSourceTests: XCTestCase {
+class TableViewDataSourceTests: XCTestCase {
     enum CellDeclaration {
         case a(A)
         case b(B)
@@ -19,7 +19,7 @@ class CollectionViewDataSourceTests: XCTestCase {
     struct Data: CellsDeclarator {
         var a: [A]
         var b: [B]
-
+        
         func declareCells(_ cell: (CellDeclaration) -> Void) {
             for a in a {
                 cell(.a(a))
@@ -29,48 +29,48 @@ class CollectionViewDataSourceTests: XCTestCase {
             }
         }
     }
-
-    var dataSource: CollectionViewDataSource<CellDeclaration>!
-    var collectionView: TestCollectionView!
-
+    
+    var dataSource: TableViewDataSource<CellDeclaration>!
+    var tableView: TestTableView!
+    
     override func setUp() {
         super.setUp()
         
-        dataSource = CollectionViewDataSource<CellDeclaration> { declaration in
+        dataSource = TableViewDataSource<CellDeclaration> { declaration in
             switch declaration {
             case .a(let a):
-                return ACollectionViewCell.makeBinder(value: a)
+                return ATableViewCell.makeBinder(value: a)
             case .b(let b):
-                return BCollectionViewCell.makeBinder(value: b)
+                return BTableViewCell.makeBinder(value: b)
             }
         }
         
-        collectionView = TestCollectionView(frame: UIScreen.main.bounds, collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.dataSource = dataSource
+        tableView = TestTableView(frame: UIScreen.main.bounds)
+        tableView.dataSource = dataSource
     }
-
+    
     func test() {
         let data = Data(a: [A(id: 1), A(id: 2)], b: [B(id: 1)])
         dataSource.cellDeclarations = data.cellDeclarations
-        collectionView.reloadData()
-        collectionView.layoutIfNeeded()
+        tableView.reloadData()
+        tableView.layoutIfNeeded()
         
-        XCTAssertEqual(dataSource.collectionView(collectionView, numberOfItemsInSection: 0), 3)
-        XCTAssertEqual(collectionView.nibRegistrations.map({ $0.reuseIdentifier }), ["ACollectionViewCell", "BCollectionViewCell"])
+        XCTAssertEqual(dataSource.tableView(tableView, numberOfRowsInSection: 0), 3)
+        XCTAssertEqual(tableView.nibRegistrations.map({ $0.reuseIdentifier }), ["ATableViewCell", "BTableViewCell"])
         
-        let verifiers: [(UICollectionViewCell?) -> Void] = [
+        let verifiers: [(UITableViewCell?) -> Void] = [
             { cell in
-                let cell = cell as? ACollectionViewCell
+                let cell = cell as? ATableViewCell
                 XCTAssertNotNil(cell)
                 XCTAssertEqual(cell?.idLabel.text, "1")
             },
             { cell in
-                let cell = cell as? ACollectionViewCell
+                let cell = cell as? ATableViewCell
                 XCTAssertNotNil(cell)
                 XCTAssertEqual(cell?.idLabel.text, "2")
             },
             { cell in
-                let cell = cell as? BCollectionViewCell
+                let cell = cell as? BTableViewCell
                 XCTAssertNotNil(cell)
                 XCTAssertEqual(cell?.idLabel.text, "1")
             },
@@ -78,7 +78,7 @@ class CollectionViewDataSourceTests: XCTestCase {
         
         for (index, verifier) in verifiers.enumerated() {
             let indexPath = IndexPath(item: index, section: 0)
-            let cell = collectionView.cellForItem(at: indexPath)
+            let cell = tableView.cellForRow(at: indexPath)
             verifier(cell)
         }
     }

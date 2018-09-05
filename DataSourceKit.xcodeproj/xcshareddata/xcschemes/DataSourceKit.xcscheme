@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7FB64BFE213B552B0071FC26"
+               BuildableName = "DataSourceKitTests.xctest"
+               BlueprintName = "DataSourceKitTests"
+               ReferencedContainer = "container:DataSourceKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7FB64BF5213B552B0071FC26"
+            BuildableName = "DataSourceKit.framework"
+            BlueprintName = "DataSourceKit"
+            ReferencedContainer = "container:DataSourceKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
