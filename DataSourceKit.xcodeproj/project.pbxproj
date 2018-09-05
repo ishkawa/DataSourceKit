@@ -34,10 +34,12 @@
 		7FB64C17213B56E20071FC26 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C16213B56E20071FC26 /* CollectionViewDataSource.swift */; };
 		7FB64C19213B58E40071FC26 /* CollectionViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C18213B58E40071FC26 /* CollectionViewDataSourceTests.swift */; };
 		7FB64C1B213B59300071FC26 /* TestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C1A213B59300071FC26 /* TestCollectionView.swift */; };
-		7FB64C1D213B5BC20071FC26 /* TestCellA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C1C213B5BC20071FC26 /* TestCellA.swift */; };
-		7FB64C1F213B5BC80071FC26 /* TestCellB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C1E213B5BC80071FC26 /* TestCellB.swift */; };
-		7FB64C21213B5BD90071FC26 /* TestCellA.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB64C20213B5BD90071FC26 /* TestCellA.xib */; };
-		7FB64C23213B5C0A0071FC26 /* TestCellB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB64C22213B5C0A0071FC26 /* TestCellB.xib */; };
+		7FB64C1D213B5BC20071FC26 /* ACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C1C213B5BC20071FC26 /* ACollectionViewCell.swift */; };
+		7FB64C1F213B5BC80071FC26 /* BCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB64C1E213B5BC80071FC26 /* BCollectionViewCell.swift */; };
+		7FB64C21213B5BD90071FC26 /* ACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB64C20213B5BD90071FC26 /* ACollectionViewCell.xib */; };
+		7FB64C23213B5C0A0071FC26 /* BCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB64C22213B5C0A0071FC26 /* BCollectionViewCell.xib */; };
+		7FC38D27213FA585009FCEB1 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D26213FA585009FCEB1 /* A.swift */; };
+		7FC38D29213FA6B7009FCEB1 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D28213FA6B7009FCEB1 /* B.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,10 +113,12 @@
 		7FB64C16213B56E20071FC26 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		7FB64C18213B58E40071FC26 /* CollectionViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceTests.swift; sourceTree = "<group>"; };
 		7FB64C1A213B59300071FC26 /* TestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionView.swift; sourceTree = "<group>"; };
-		7FB64C1C213B5BC20071FC26 /* TestCellA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCellA.swift; sourceTree = "<group>"; };
-		7FB64C1E213B5BC80071FC26 /* TestCellB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCellB.swift; sourceTree = "<group>"; };
-		7FB64C20213B5BD90071FC26 /* TestCellA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCellA.xib; sourceTree = "<group>"; };
-		7FB64C22213B5C0A0071FC26 /* TestCellB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCellB.xib; sourceTree = "<group>"; };
+		7FB64C1C213B5BC20071FC26 /* ACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACollectionViewCell.swift; sourceTree = "<group>"; };
+		7FB64C1E213B5BC80071FC26 /* BCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCollectionViewCell.swift; sourceTree = "<group>"; };
+		7FB64C20213B5BD90071FC26 /* ACollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACollectionViewCell.xib; sourceTree = "<group>"; };
+		7FB64C22213B5C0A0071FC26 /* BCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BCollectionViewCell.xib; sourceTree = "<group>"; };
+		7FC38D26213FA585009FCEB1 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
+		7FC38D28213FA6B7009FCEB1 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,10 +251,12 @@
 			isa = PBXGroup;
 			children = (
 				7FB64C1A213B59300071FC26 /* TestCollectionView.swift */,
-				7FB64C20213B5BD90071FC26 /* TestCellA.xib */,
-				7FB64C1C213B5BC20071FC26 /* TestCellA.swift */,
-				7FB64C22213B5C0A0071FC26 /* TestCellB.xib */,
-				7FB64C1E213B5BC80071FC26 /* TestCellB.swift */,
+				7FC38D26213FA585009FCEB1 /* A.swift */,
+				7FB64C20213B5BD90071FC26 /* ACollectionViewCell.xib */,
+				7FB64C1C213B5BC20071FC26 /* ACollectionViewCell.swift */,
+				7FC38D28213FA6B7009FCEB1 /* B.swift */,
+				7FB64C22213B5C0A0071FC26 /* BCollectionViewCell.xib */,
+				7FB64C1E213B5BC80071FC26 /* BCollectionViewCell.swift */,
 				7FB64C18213B58E40071FC26 /* CollectionViewDataSourceTests.swift */,
 				7FB64C06213B552B0071FC26 /* Info.plist */,
 			);
@@ -424,8 +430,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB64C23213B5C0A0071FC26 /* TestCellB.xib in Resources */,
-				7FB64C21213B5BD90071FC26 /* TestCellA.xib in Resources */,
+				7FB64C23213B5C0A0071FC26 /* BCollectionViewCell.xib in Resources */,
+				7FB64C21213B5BD90071FC26 /* ACollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,9 +477,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB64C1F213B5BC80071FC26 /* TestCellB.swift in Sources */,
-				7FB64C1D213B5BC20071FC26 /* TestCellA.swift in Sources */,
+				7FC38D29213FA6B7009FCEB1 /* B.swift in Sources */,
+				7FB64C1F213B5BC80071FC26 /* BCollectionViewCell.swift in Sources */,
+				7FB64C1D213B5BC20071FC26 /* ACollectionViewCell.swift in Sources */,
 				7FB64C1B213B59300071FC26 /* TestCollectionView.swift in Sources */,
+				7FC38D27213FA585009FCEB1 /* A.swift in Sources */,
 				7FB64C19213B58E40071FC26 /* CollectionViewDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

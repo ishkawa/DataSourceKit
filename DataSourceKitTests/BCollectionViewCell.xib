@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="270-PL-Qvt" customClass="TestCellA" customModule="DataSourceKitTests" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hjy-NB-v7I" customClass="BCollectionViewCell" customModule="DataSourceKitTests" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fH-LH-6uc">
-                        <rect key="frame" x="19.5" y="14.5" width="11" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWt-tR-Pe5">
+                        <rect key="frame" x="20" y="14.5" width="10.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -27,12 +28,12 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="3fH-LH-6uc" firstAttribute="centerX" secondItem="bwZ-J4-grT" secondAttribute="centerX" id="sTE-rM-MC9"/>
-                <constraint firstItem="3fH-LH-6uc" firstAttribute="centerY" secondItem="bwZ-J4-grT" secondAttribute="centerY" id="zLf-FM-JVv"/>
+                <constraint firstItem="QWt-tR-Pe5" firstAttribute="centerX" secondItem="K9E-iH-Mol" secondAttribute="centerX" id="8Jx-4k-7ZV"/>
+                <constraint firstItem="QWt-tR-Pe5" firstAttribute="centerY" secondItem="K9E-iH-Mol" secondAttribute="centerY" id="Asl-bJ-EEX"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="bwZ-J4-grT"/>
+            <viewLayoutGuide key="safeArea" id="K9E-iH-Mol"/>
             <connections>
-                <outlet property="idLabel" destination="3fH-LH-6uc" id="cej-D6-o8i"/>
+                <outlet property="idLabel" destination="QWt-tR-Pe5" id="O3e-bO-pif"/>
             </connections>
         </collectionViewCell>
     </objects>

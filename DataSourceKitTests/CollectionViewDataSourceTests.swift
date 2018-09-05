@@ -39,9 +39,9 @@ class CollectionViewDataSourceTests: XCTestCase {
         dataSource = CollectionViewDataSource<CellDeclaration> { declaration in
             switch declaration {
             case .a(let a):
-                return TestCellA.makeBinder(value: a)
+                return ACollectionViewCell.makeBinder(value: a)
             case .b(let b):
-                return TestCellB.makeBinder(value: b)
+                return BCollectionViewCell.makeBinder(value: b)
             }
         }
         
@@ -56,21 +56,21 @@ class CollectionViewDataSourceTests: XCTestCase {
         collectionView.layoutIfNeeded()
         
         XCTAssertEqual(dataSource.collectionView(collectionView, numberOfItemsInSection: 0), 3)
-        XCTAssertEqual(collectionView.nibRegistrations.map({ $0.reuseIdentifier }), ["TestCellA", "TestCellB"])
+        XCTAssertEqual(collectionView.nibRegistrations.map({ $0.reuseIdentifier }), ["ACollectionViewCell", "BCollectionViewCell"])
         
         let verifiers: [(UICollectionViewCell?) -> Void] = [
             { cell in
-                let cell = cell as? TestCellA
+                let cell = cell as? ACollectionViewCell
                 XCTAssertNotNil(cell)
                 XCTAssertEqual(cell?.idLabel.text, "1")
             },
             { cell in
-                let cell = cell as? TestCellA
+                let cell = cell as? ACollectionViewCell
                 XCTAssertNotNil(cell)
                 XCTAssertEqual(cell?.idLabel.text, "2")
             },
             { cell in
-                let cell = cell as? TestCellB
+                let cell = cell as? BCollectionViewCell
                 XCTAssertNotNil(cell)
                 XCTAssertEqual(cell?.idLabel.text, "1")
             },

@@ -1,5 +1,5 @@
 //
-//  TestCellB.swift
+//  BCollectionViewCell.swift
 //  DataSourceKitTests
 //
 //  Created by Yosuke Ishikawa on 2018/09/02.
@@ -9,20 +9,16 @@
 import UIKit
 import DataSourceKit
 
-struct B {
-    let id: Int64
-}
-
-final class TestCellB: UICollectionViewCell {
+final class BCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var idLabel: UILabel!
 }
 
-extension TestCellB: BindableCell {
+extension BCollectionViewCell: BindableCell {
     static func makeBinder(value: B) -> CellBinder {
         return CellBinder(
-            cellType: TestCellB.self,
-            nib: UINib(nibName: "TestCellB", bundle: Bundle(for: TestCellB.self)),
-            reuseIdentifier: "TestCellB",
+            cellType: BCollectionViewCell.self,
+            nib: UINib(nibName: "BCollectionViewCell", bundle: Bundle(for: BCollectionViewCell.self)),
+            reuseIdentifier: "BCollectionViewCell",
             configureCell: { cell in
                 cell.idLabel.text = String(value.id)
         })
