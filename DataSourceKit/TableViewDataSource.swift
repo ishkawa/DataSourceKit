@@ -26,7 +26,11 @@ public class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSour
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellBinder = binderFromDeclaration(cellDeclarations[indexPath.item])
         if !registeredReuseIdentifiers.contains(cellBinder.reuseIdentifier) {
-            tableView.register(cellBinder.nib, forCellReuseIdentifier: cellBinder.reuseIdentifier)
+            if let nib = cellBinder.nib {
+                tableView.register(nib, forCellReuseIdentifier: cellBinder.reuseIdentifier)
+            } else {
+                tableView.register(cellBinder.cellType, forCellReuseIdentifier: cellBinder.reuseIdentifier)
+            }
             registeredReuseIdentifiers.append(cellBinder.reuseIdentifier)
         }
         

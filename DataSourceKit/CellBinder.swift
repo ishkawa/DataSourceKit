@@ -9,13 +9,15 @@
 import Foundation
 
 public struct CellBinder {
-    public let nib: UINib
+    public let nib: UINib?
+    public let cellType: AnyClass?
     public let reuseIdentifier: String
     
     internal let configureCell: (Any) -> Void
     
-    public init<Cell>(cellType: Cell.Type, nib: UINib, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
+    public init<Cell>(cellType: Cell.Type, nib: UINib?, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
         self.nib = nib
+        self.cellType = cellType as? AnyClass
         self.reuseIdentifier = reuseIdentifier
         self.configureCell = { cell in
             guard let cell = cell as? Cell else {

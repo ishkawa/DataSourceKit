@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		553ACE5D21461F1700710FDF /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553ACE5C21461F1700710FDF /* C.swift */; };
+		553ACE5F21461F4B00710FDF /* CCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553ACE5E21461F4B00710FDF /* CCollectionViewCell.swift */; };
+		553ACE6121461F7300710FDF /* CTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553ACE6021461F7300710FDF /* CTableViewCell.swift */; };
 		7F59442B213FA22E007300FC /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59442A213FA22E007300FC /* TableViewDataSource.swift */; };
 		7F9AEDAD213BBBA10092854F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDAC213BBBA10092854F /* AppDelegate.swift */; };
 		7F9AEDB4213BBBA30092854F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9AEDB3213BBBA30092854F /* Assets.xcassets */; };
@@ -89,6 +92,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		553ACE5C21461F1700710FDF /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
+		553ACE5E21461F4B00710FDF /* CCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCollectionViewCell.swift; sourceTree = "<group>"; };
+		553ACE6021461F7300710FDF /* CTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTableViewCell.swift; sourceTree = "<group>"; };
 		7F59442A213FA22E007300FC /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		7F9AEDAA213BBBA10092854F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9AEDAC213BBBA10092854F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -290,6 +296,9 @@
 				7FB64C1E213B5BC80071FC26 /* BCollectionViewCell.swift */,
 				7FC38D2E213FA8B3009FCEB1 /* BTableViewCell.xib */,
 				7FC38D30213FA8BC009FCEB1 /* BTableViewCell.swift */,
+				553ACE5C21461F1700710FDF /* C.swift */,
+				553ACE5E21461F4B00710FDF /* CCollectionViewCell.swift */,
+				553ACE6021461F7300710FDF /* CTableViewCell.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -530,8 +539,11 @@
 				7FC38D29213FA6B7009FCEB1 /* B.swift in Sources */,
 				7FC38D33213FA908009FCEB1 /* TableViewDataSourceTests.swift in Sources */,
 				7FB64C1F213B5BC80071FC26 /* BCollectionViewCell.swift in Sources */,
+				553ACE5D21461F1700710FDF /* C.swift in Sources */,
 				7FB64C1D213B5BC20071FC26 /* ACollectionViewCell.swift in Sources */,
 				7FB64C1B213B59300071FC26 /* TestCollectionView.swift in Sources */,
+				553ACE6121461F7300710FDF /* CTableViewCell.swift in Sources */,
+				553ACE5F21461F4B00710FDF /* CCollectionViewCell.swift in Sources */,
 				7FC38D35213FA917009FCEB1 /* TestTableView.swift in Sources */,
 				7FC38D31213FA8BC009FCEB1 /* BTableViewCell.swift in Sources */,
 				7FC38D27213FA585009FCEB1 /* A.swift in Sources */,
