@@ -10,32 +10,25 @@ import UIKit
 import DataSourceKit
 
 final class VenueDetailViewController: UIViewController {
-    enum CellDeclaration: Equatable {
-        case outline(Venue)
-        case sectionHeader(String)
-        case review(Review)
-        case relatedVenue(Venue)
-    }
-    
     struct Data: CellsDeclarator {
         var venue: Venue
         var reviews: [Review]
         var relatedVenues: [Venue]
-
-        func declareCells(_ cell: (CellDeclaration) -> Void) {
-            cell(.outline(venue))
-
+        
+        func declareCells(_ cell: (CellBinder) -> Void) {
+            cell(VenueOutlineCell.makeBinder(value: venue))
+            
             if !reviews.isEmpty {
-                cell(.sectionHeader("Reviews"))
+                cell(SectionHeaderCell.makeBinder(value: "Reviews"))
                 for review in reviews {
-                    cell(.review(review))
+                    cell(ReviewCell.makeBinder(value: review))
                 }
             }
             
             if !relatedVenues.isEmpty {
-                cell(.sectionHeader("Related Venues"))
+                cell(SectionHeaderCell.makeBinder(value: "Related Venues"))
                 for relatedVenue in relatedVenues {
-                    cell(.relatedVenue(relatedVenue))
+                    cell(RelatedVenueCell.makeBinder(value: relatedVenue))
                 }
             }
         }
@@ -48,19 +41,8 @@ final class VenueDetailViewController: UIViewController {
     }
     
     @IBOutlet private weak var collectionView: UICollectionView!
-
-    private let dataSource = CollectionViewDataSource<CellDeclaration> { cellDeclaration in
-        switch cellDeclaration {
-        case .outline(let venue):
-            return VenueOutlineCell.makeBinder(value: venue)
-        case .sectionHeader(let title):
-            return SectionHeaderCell.makeBinder(value: title)
-        case .review(let review):
-            return ReviewCell.makeBinder(value: review)
-        case .relatedVenue(let venue):
-            return RelatedVenueCell.makeBinder(value: venue)
-        }
-    }
+    
+    private let dataSource = CollectionViewDataSource()
     
     private var data: Data! {
         didSet {
