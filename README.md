@@ -10,45 +10,6 @@ Add a line `github "ishkawa/DataSourceKit"` to your Cartfile and run `carthage u
 
 ## Usage
 
-### Define kinds of cells in CellDeclaration
-
-```swift
-enum CellDeclaration: Equatable {
-    case outline(Venue)
-    case sectionHeader(String)
-    case review(Review)
-    case relatedVenue(Venue)
-}
-```
-
-### Convert state to [CellDeclaration]
-
-```swift
-struct Data: CellsDeclarator {
-    var venue: Venue
-    var reviews: [Review]
-    var relatedVenues: [Venue]
-
-    func declareCells(_ cell: (CellDeclaration) -> Void) {
-        cell(.outline(venue))
-
-        if !reviews.isEmpty {
-            cell(.sectionHeader("Reviews"))
-            for review in reviews {
-                cell(.review(review))
-            }
-        }
-
-        if !relatedVenues.isEmpty {
-            cell(.sectionHeader("Related Venues"))
-            for relatedVenue in relatedVenues {
-                cell(.relatedVenue(relatedVenue))
-            }
-        }
-    }
-}
-```
-
 ### Let cells to conform BindableCell
 
 ```swift
@@ -67,19 +28,30 @@ extension ReviewCell: BindableCell {
 }
 ```
 
-### Bind cell declarations and actual cell types
+### Declare ordered cells in conformer of CellsDeclarator
 
 ```swift
-let dataSource = CollectionViewDataSource<CellDeclaration> { cellDeclaration in
-    switch cellDeclaration {
-    case .outline(let venue):
-        return VenueOutlineCell.makeBinder(value: venue)
-    case .sectionHeader(let title):
-        return SectionHeaderCell.makeBinder(value: title)
-    case .review(let review):
-        return ReviewCell.makeBinder(value: review)
-    case .relatedVenue(let venue):
-        return RelatedVenueCell.makeBinder(value: venue)
+struct Data: CellsDeclarator {
+    var venue: Venue
+    var reviews: [Review]
+    var relatedVenues: [Venue]
+
+    func declareCells(_ cell: (CellBinder) -> Void) {
+        cell(VenueOutlineCell.makeBinder(value: venue))
+
+        if !reviews.isEmpty {
+            cell(SectionHeaderCell.makeBinder(value: "Reviews"))
+            for review in reviews {
+                cell(ReviewCell.makeBinder(value: review))
+            }
+        }
+
+        if !relatedVenues.isEmpty {
+            cell(SectionHeaderCell.makeBinder(value: "Related Venues"))
+            for relatedVenue in relatedVenues {
+                cell(RelatedVenueCell.makeBinder(value: relatedVenue))
+            }
+        }
     }
 }
 ```
