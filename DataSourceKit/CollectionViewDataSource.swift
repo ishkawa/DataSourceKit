@@ -40,7 +40,7 @@ public class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionVi
 extension CollectionViewDataSource where CellDeclaration == CellBinder {
     // Add meaningless parameter to avoid error `Members of constrained extensions
     // cannot be declared @objc`, which is caused by collision to init() of NSObject.
-    public convenience init(_ declarationType: CellDeclaration.Type) {
-        self.init(binderFromDeclaration: { $0 })
+    public convenience init(binderFromBinder: @escaping (CellBinder) -> CellBinder = { $0 }) {
+        self.init(binderFromDeclaration: binderFromBinder)
     }
 }
