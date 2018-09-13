@@ -28,7 +28,7 @@ extension RelatedVenueCell: BindableCell {
     static func makeBinder(value venue: Venue) -> CellBinder {
         return CellBinder(
             cellType: RelatedVenueCell.self,
-            nib: UINib(nibName: "RelatedVenueCell", bundle: nil),
+            registrationMethod: .nib(UINib(nibName: "RelatedVenueCell", bundle: nil)),
             reuseIdentifier: "RelatedVenue",
             configureCell: { cell in
                 cell.photoImageView.image = venue.photo

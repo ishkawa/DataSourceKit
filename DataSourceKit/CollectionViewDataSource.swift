@@ -26,11 +26,13 @@ public class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionVi
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellBinder = binderFromDeclaration(cellDeclarations[indexPath.item])
         if !registeredReuseIdentifiers.contains(cellBinder.reuseIdentifier) {
-            
-            if let nib = cellBinder.nib {
+            switch cellBinder.registrationMethod {
+            case let .nib(nib):
                 collectionView.register(nib, forCellWithReuseIdentifier: cellBinder.reuseIdentifier)
-            } else {
-                collectionView.register(cellBinder.cellType, forCellWithReuseIdentifier: cellBinder.reuseIdentifier)
+            case let .class(cellClass):
+                collectionView.register(cellClass, forCellWithReuseIdentifier: cellBinder.reuseIdentifier)
+            case .none:
+                break
             }
             registeredReuseIdentifiers.append(cellBinder.reuseIdentifier)
         }
