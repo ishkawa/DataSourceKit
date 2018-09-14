@@ -17,7 +17,7 @@ extension SectionHeaderCell: BindableCell {
     static func makeBinder(value title: String) -> CellBinder {
         return CellBinder(
             cellType: SectionHeaderCell.self,
-            nib: UINib(nibName: "SectionHeaderCell", bundle: nil),
+            registrationMethod: .nib(UINib(nibName: "SectionHeaderCell", bundle: nil)),
             reuseIdentifier: "SectionHeader",
             configureCell: { cell in
                 cell.titleLabel.text = title

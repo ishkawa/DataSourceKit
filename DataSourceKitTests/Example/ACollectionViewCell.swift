@@ -17,7 +17,7 @@ extension ACollectionViewCell: BindableCell {
     static func makeBinder(value: A) -> CellBinder {
         return CellBinder(
             cellType: ACollectionViewCell.self,
-            nib: UINib(nibName: "ACollectionViewCell", bundle: Bundle(for: ACollectionViewCell.self)),
+            registrationMethod: .nib(UINib(nibName: "ACollectionViewCell", bundle: Bundle(for: ACollectionViewCell.self))),
             reuseIdentifier: "ACollectionViewCell",
             configureCell: { cell in
                 cell.idLabel.text = String(value.id)
