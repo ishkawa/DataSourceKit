@@ -21,10 +21,6 @@ public struct CellBinder {
     
     internal let configureCell: (Any) -> Void
     
-    public init<Cell>(cellType: Cell.Type, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
-        self.init(cellType: cellType, registrationMethod: .class(cellType as! AnyClass), reuseIdentifier: reuseIdentifier, configureCell: configureCell)
-    }
-    
     public init<Cell>(cellType: Cell.Type, registrationMethod: RegistrationMethod, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
         self.registrationMethod = registrationMethod
         self.reuseIdentifier = reuseIdentifier
