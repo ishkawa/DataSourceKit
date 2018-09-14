@@ -34,7 +34,7 @@ public struct CellBinder {
     }
     
     @available(*, deprecated, message:  "Use `init<Cell>(cellType: Cell.Type, registrationMethod: RegistrationMethod, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void)` instead")
-    public init<Cell>(cellType: Cell.Type, nib: UINib?, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
-        fatalError("This method is deprecated, Use `init<Cell>(cellType: Cell.Type, registrationMethod: RegistrationMethod, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void)` instead")
+    public init<Cell>(cellType: Cell.Type, nib: UINib, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
+        self.init(cellType: cellType, registrationMethod: .nib(nib), reuseIdentifier: reuseIdentifier, configureCell: configureCell)
     }
 }
