@@ -9,13 +9,20 @@
 import Foundation
 
 public struct CellBinder {
-    public let nib: UINib
+    
+    public enum RegistrationMethod {
+        case nib(UINib)
+        case `class`(AnyClass)
+        case none
+    }
+    
+    public let registrationMethod: RegistrationMethod
     public let reuseIdentifier: String
     
     internal let configureCell: (Any) -> Void
     
-    public init<Cell>(cellType: Cell.Type, nib: UINib, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
-        self.nib = nib
+    public init<Cell>(cellType: Cell.Type, registrationMethod: RegistrationMethod, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
+        self.registrationMethod = registrationMethod
         self.reuseIdentifier = reuseIdentifier
         self.configureCell = { cell in
             guard let cell = cell as? Cell else {
@@ -24,5 +31,10 @@ public struct CellBinder {
             
             configureCell(cell)
         }
+    }
+    
+    @available(*, deprecated, message:  "Use `init<Cell>(cellType: Cell.Type, registrationMethod: RegistrationMethod, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void)` instead")
+    public init<Cell>(cellType: Cell.Type, nib: UINib?, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void) {
+        fatalError("This method is deprecated, Use `init<Cell>(cellType: Cell.Type, registrationMethod: RegistrationMethod, reuseIdentifier: String, configureCell: @escaping (Cell) -> Void)` instead")
     }
 }

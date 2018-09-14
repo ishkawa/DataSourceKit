@@ -26,13 +26,18 @@ public class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSour
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellBinder = binderFromDeclaration(cellDeclarations[indexPath.item])
         if !registeredReuseIdentifiers.contains(cellBinder.reuseIdentifier) {
-            tableView.register(cellBinder.nib, forCellReuseIdentifier: cellBinder.reuseIdentifier)
+            switch cellBinder.registrationMethod {
+            case let .nib(nib):
+                tableView.register(nib, forCellReuseIdentifier: cellBinder.reuseIdentifier)
+            case let .class(cellClass):
+                tableView.register(cellClass, forCellReuseIdentifier: cellBinder.reuseIdentifier)
+            case .none:
+                break
+            }
             registeredReuseIdentifiers.append(cellBinder.reuseIdentifier)
         }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellBinder.reuseIdentifier, for: indexPath)
         cellBinder.configureCell(cell)
-        
         return cell
     }
 }
