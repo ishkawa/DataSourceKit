@@ -31,7 +31,7 @@ extension CTableViewCell: BindableCell {
     static func makeBinder(value: C) -> CellBinder {
         return CellBinder(
             cellType: CTableViewCell.self,
-            nib: nil,
+            registrationMethod: .class(CTableViewCell.self),
             reuseIdentifier: "CTableViewCell",
             configureCell: { (cell) in
                 cell.idLabel.text = "\(value.id)"

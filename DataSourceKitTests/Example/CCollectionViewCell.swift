@@ -17,7 +17,7 @@ extension CCollectionViewCell: BindableCell {
     static func makeBinder(value: C) -> CellBinder {
         return CellBinder(
             cellType: CCollectionViewCell.self,
-            nib: nil,
+            registrationMethod: .class(CCollectionViewCell.self),
             reuseIdentifier: "CCollectionViewCell",
             configureCell: { (cell) in
                 cell.idLabel.text = "\(value.id)"
