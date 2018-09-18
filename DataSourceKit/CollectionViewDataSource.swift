@@ -8,17 +8,19 @@
 
 import UIKit
 
-public class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionViewDataSource {
+open class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionViewDataSource {
     public var cellDeclarations = [] as [CellDeclaration]
     
     private var registeredReuseIdentifiers = [] as [String]
     private let binderFromDeclaration: (CellDeclaration) -> CellBinder
-    
+    public typealias ConfigureSupplementaryView = (CollectionViewDataSource<CellDeclaration>, UICollectionView, String, IndexPath) -> UICollectionReusableView
+    open var configureSupplementaryView: ConfigureSupplementaryView?
+
     public init(binderFromDeclaration: @escaping (CellDeclaration) -> CellBinder) {
         self.binderFromDeclaration = binderFromDeclaration
         super.init()
     }
-    
+
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellDeclarations.count
     }
@@ -41,5 +43,18 @@ public class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionVi
         cellBinder.configureCell(cell)
         
         return cell
+    }
+
+
+    public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        return configureSupplementaryView!(self, collectionView, kind, indexPath)
+    }
+
+    open override func responds(to aSelector: Selector!) -> Bool {
+        if aSelector == #selector(UICollectionViewDataSource.collectionView(_:viewForSupplementaryElementOfKind:at:)) {
+            return configureSupplementaryView != nil
+        } else {
+            return super.responds(to: aSelector)
+        }
     }
 }
