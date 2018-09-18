@@ -9,9 +9,9 @@
 import UIKit
 
 public class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSource {
-    public var cellDeclarations = [] as [CellDeclaration]
+    public var cellDeclarations: [[CellDeclaration]] = [[]]
     
-    private var registeredReuseIdentifiers = [] as [String]
+    private var registeredReuseIdentifiers: [String] = []
     private let binderFromDeclaration: (CellDeclaration) -> CellBinder
     
     public init(binderFromDeclaration: @escaping (CellDeclaration) -> CellBinder) {
@@ -20,11 +20,15 @@ public class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSour
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellDeclarations[section].count
+    }
+
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return cellDeclarations.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellBinder = binderFromDeclaration(cellDeclarations[indexPath.item])
+        let cellBinder = binderFromDeclaration(cellDeclarations[indexPath.section][indexPath.row])
         if !registeredReuseIdentifiers.contains(cellBinder.reuseIdentifier) {
             switch cellBinder.registrationMethod {
             case let .nib(nib):
