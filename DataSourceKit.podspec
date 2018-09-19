@@ -12,8 +12,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
 	s.swift_version = '4.1'
   s.source       = { :git => "https://github.com/ishkawa/DataSourceKit.git", :tag => "#{s.version}" }
+  s.source_files  = "DataSourceKit", "DataSourceKit/**/*.{h,m,swift}"
   s.public_header_files = "DataSourceKit/**/*.h"
 end
-  s.source_files  = "DataSourceKit", "DataSourceKit/**/*.{h,m}"
-
-  s.source_files  = "DataSourceKit", "DataSourceKit/**/*.{h,m}"
