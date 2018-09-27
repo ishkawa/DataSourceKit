@@ -8,13 +8,13 @@
 
 import UIKit
 
-open class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionViewDataSource {
+public class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionViewDataSource {
     public var cellDeclarations = [] as [CellDeclaration]
-    
+    public typealias ConfigureSupplementaryView = (CollectionViewDataSource<CellDeclaration>, UICollectionView, String, IndexPath) -> UICollectionReusableView
+    public var configureSupplementaryView: ConfigureSupplementaryView?
+
     private var registeredReuseIdentifiers = [] as [String]
     private let binderFromDeclaration: (CellDeclaration) -> CellBinder
-    public typealias ConfigureSupplementaryView = (CollectionViewDataSource<CellDeclaration>, UICollectionView, String, IndexPath) -> UICollectionReusableView
-    open var configureSupplementaryView: ConfigureSupplementaryView?
 
     public init(binderFromDeclaration: @escaping (CellDeclaration) -> CellBinder) {
         self.binderFromDeclaration = binderFromDeclaration
@@ -47,14 +47,17 @@ open class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionView
 
 
     public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        return configureSupplementaryView!(self, collectionView, kind, indexPath)
+        guard let configureSupplementaryView = self.configureSupplementaryView else {
+            return UICollectionReusableView()
+        }
+        return configureSupplementaryView(self, collectionView, kind, indexPath)
     }
 
-    open override func responds(to aSelector: Selector!) -> Bool {
+    public override func responds(to aSelector: Selector!) -> Bool {
         if aSelector == #selector(UICollectionViewDataSource.collectionView(_:viewForSupplementaryElementOfKind:at:)) {
             return configureSupplementaryView != nil
-        } else {
-            return super.responds(to: aSelector)
         }
+
+        return super.responds(to: aSelector)
     }
 }
