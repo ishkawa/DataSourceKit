@@ -26,7 +26,7 @@ public struct CellBinder {
         self.reuseIdentifier = reuseIdentifier
         self.configureCell = { cell in
             guard let cell = cell as? Cell else {
-                fatalError("Could not cast UICollectionView cell to \(Cell.self)")
+                fatalError("Could not cast cell to \(Cell.self)")
             }
             
             configureCell(cell)
