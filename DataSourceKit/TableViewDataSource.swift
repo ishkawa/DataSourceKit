@@ -9,12 +9,13 @@
 import UIKit
 
 public class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSource {
+    public typealias Configurator = (CellDeclaration) -> CellBinder
     public var cellDeclarations = [] as [CellDeclaration]
     
     private var registeredReuseIdentifiers = [] as [String]
-    private let binderFromDeclaration: (CellDeclaration) -> CellBinder
+    private let binderFromDeclaration: Configurator
     
-    public init(binderFromDeclaration: @escaping (CellDeclaration) -> CellBinder) {
+    public init(binderFromDeclaration: @escaping Configurator) {
         self.binderFromDeclaration = binderFromDeclaration
         super.init()
     }
