@@ -12,7 +12,7 @@ import DataSourceKit
 class CTableViewCell: UITableViewCell {
     var idLabel = UILabel(frame: .zero)
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(idLabel)
         idLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)

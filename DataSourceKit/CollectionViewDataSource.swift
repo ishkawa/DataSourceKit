@@ -9,15 +9,25 @@
 import UIKit
 
 public class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionViewDataSource {
+
+    // MARK: Public Properties
+
+    public typealias Configurator = (CellDeclaration) -> CellBinder
     public var cellDeclarations = [] as [CellDeclaration]
-    
+
+    // MARK: Private Properties
+
     private var registeredReuseIdentifiers = [] as [String]
-    private let binderFromDeclaration: (CellDeclaration) -> CellBinder
-    
-    public init(binderFromDeclaration: @escaping (CellDeclaration) -> CellBinder) {
+    private let binderFromDeclaration: Configurator
+
+    // MARK: Init
+
+    public init(binderFromDeclaration: @escaping Configurator) {
         self.binderFromDeclaration = binderFromDeclaration
         super.init()
     }
+
+    // MARK: UICollectionViewDataSource
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellDeclarations.count
