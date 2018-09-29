@@ -8,8 +8,8 @@
 
 import UIKit
 
-public class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSource {
-    public var cellDeclarations = [] as [CellDeclaration]
+open class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSource {
+    open var cellDeclarations = [] as [CellDeclaration]
     
     private var registeredReuseIdentifiers = [] as [String]
     private let binderFromDeclaration: (CellDeclaration) -> CellBinder
@@ -19,11 +19,11 @@ public class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSour
         super.init()
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellDeclarations.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellBinder = binderFromDeclaration(cellDeclarations[indexPath.item])
         if !registeredReuseIdentifiers.contains(cellBinder.reuseIdentifier) {
             switch cellBinder.registrationMethod {
