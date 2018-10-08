@@ -8,8 +8,8 @@
 
 import UIKit
 
-public class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionViewDataSource {
-    public var cellDeclarations = [] as [CellDeclaration]
+open class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionViewDataSource {
+    open var cellDeclarations = [] as [CellDeclaration]
     
     private var registeredReuseIdentifiers = [] as [String]
     private let binderFromDeclaration: (CellDeclaration) -> CellBinder
@@ -19,11 +19,11 @@ public class CollectionViewDataSource<CellDeclaration>: NSObject, UICollectionVi
         super.init()
     }
     
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellDeclarations.count
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellBinder = binderFromDeclaration(cellDeclarations[indexPath.item])
         if !registeredReuseIdentifiers.contains(cellBinder.reuseIdentifier) {
             switch cellBinder.registrationMethod {

@@ -14,7 +14,7 @@ class CollectionViewFullWidthCell: UICollectionViewCell {
             return layoutAttributes
         }
         
-        var targetSize = UILayoutFittingCompressedSize
+        var targetSize = UIView.layoutFittingCompressedSize
         targetSize.width = floor(superview.frame.width / CGFloat(numberOfColumns))
         
         layoutAttributes.size = contentView.systemLayoutSizeFitting(
