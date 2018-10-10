@@ -17,7 +17,7 @@ extension ATableViewCell: BindableCell {
     static func makeBinder(value: A) -> CellBinder {
         return CellBinder(
             cellType: ATableViewCell.self,
-            nib: UINib(nibName: "ATableViewCell", bundle: Bundle(for: ATableViewCell.self)),
+            registrationMethod: .nib(UINib(nibName: "ATableViewCell", bundle: Bundle(for: ATableViewCell.self))),
             reuseIdentifier: "ATableViewCell",
             configureCell: { cell in
                 cell.idLabel.text = String(value.id)

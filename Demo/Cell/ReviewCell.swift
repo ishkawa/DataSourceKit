@@ -19,7 +19,7 @@ extension ReviewCell: BindableCell {
     static func makeBinder(value review: Review) -> CellBinder {
         return CellBinder(
             cellType: ReviewCell.self,
-            nib: UINib(nibName: "ReviewCell", bundle: nil),
+            registrationMethod: .nib(UINib(nibName: "ReviewCell", bundle: nil)),
             reuseIdentifier: "Review",
             configureCell: { cell in
                 cell.authorImageView.image = review.authorImage

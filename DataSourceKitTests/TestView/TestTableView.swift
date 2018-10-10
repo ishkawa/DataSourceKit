@@ -14,12 +14,25 @@ class TestTableView: UITableView {
         let nib: UINib?
     }
     
+    struct ClassRegistration {
+        let reuseIdentifier: String
+        let cellClass: AnyClass?
+    }
+    
     var nibRegistrations = [] as [NibRegistration]
+    var classRegistrations = [] as [ClassRegistration]
     
     override func register(_ nib: UINib?, forCellReuseIdentifier identifier: String) {
         super.register(nib, forCellReuseIdentifier: identifier)
 
         let nibRegistration = NibRegistration(reuseIdentifier: identifier, nib: nib)
         nibRegistrations.append(nibRegistration)
+    }
+    
+    override func register(_ cellClass: AnyClass?, forCellReuseIdentifier identifier: String) {
+        super.register(cellClass, forCellReuseIdentifier: identifier)
+        
+        let classRegistration = ClassRegistration(reuseIdentifier: identifier, cellClass: cellClass)
+        classRegistrations.append(classRegistration)
     }
 }
