@@ -10,7 +10,7 @@ matrix:
       script:
         - set -o pipefail
         - xcodebuild test -scheme DataSourceKit -configuration Release ENABLE_TESTABILITY=YES | xcpretty -c
-        - xcodebuild build -scheme Demo -configuration Release | xcpretty -c
+        - xcodebuild test -scheme Demo -configuration Release ENABLE_TESTABILITY=YES | xcpretty -c
 
 notifications:
   email: false
