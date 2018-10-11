@@ -44,6 +44,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>UIMainStoryboardFile</key>
-	<string>VenueDetail</string>
+	<string>SimpleVenueDetail</string>
 </dict>
 </plist>

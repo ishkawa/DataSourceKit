@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Venue Detail View Controller-->
+        <!--Advanced Venue Detail View Controller-->
         <scene sceneID="TD0-qs-pd1">
             <objects>
-                <viewController id="Oqc-GQ-LBr" customClass="VenueDetailViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Oqc-GQ-LBr" customClass="AdvancedVenueDetailViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="otu-K5-33b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

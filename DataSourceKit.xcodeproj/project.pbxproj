@@ -19,8 +19,8 @@
 		7F9AEDDF213BBC390092854F /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD2213BBC390092854F /* Venue.swift */; };
 		7F9AEDE0213BBC390092854F /* VenueOutlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD4213BBC390092854F /* VenueOutlineCell.xib */; };
 		7F9AEDE1213BBC390092854F /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD5213BBC390092854F /* SectionHeaderCell.swift */; };
-		7F9AEDE2213BBC390092854F /* VenueDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD6213BBC390092854F /* VenueDetail.storyboard */; };
-		7F9AEDE3213BBC390092854F /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD7213BBC390092854F /* VenueDetailViewController.swift */; };
+		7F9AEDE2213BBC390092854F /* SimpleVenueDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD6213BBC390092854F /* SimpleVenueDetail.storyboard */; };
+		7F9AEDE3213BBC390092854F /* SimpleVenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD7213BBC390092854F /* SimpleVenueDetailViewController.swift */; };
 		7F9AEDE4213BBC390092854F /* RelatedVenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD8213BBC390092854F /* RelatedVenueCell.swift */; };
 		7F9AEDE5213BBC390092854F /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F9AEDD9213BBC390092854F /* ReviewCell.xib */; };
 		7F9AEDE6213BBC390092854F /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AEDDA213BBC390092854F /* ReviewCell.swift */; };
@@ -49,8 +49,11 @@
 		7FC38D31213FA8BC009FCEB1 /* BTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D30213FA8BC009FCEB1 /* BTableViewCell.swift */; };
 		7FC38D33213FA908009FCEB1 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D32213FA908009FCEB1 /* TableViewDataSourceTests.swift */; };
 		7FC38D35213FA917009FCEB1 /* TestTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D34213FA917009FCEB1 /* TestTableView.swift */; };
-		7FC38D39213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D38213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift */; };
+		7FC38D39213FAC69009FCEB1 /* AdvancedVenueDetailViewStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC38D38213FAC69009FCEB1 /* AdvancedVenueDetailViewStateTests.swift */; };
 		7FC38D3B213FACE8009FCEB1 /* DataSourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB64BF6213B552B0071FC26 /* DataSourceKit.framework */; };
+		7FD4BB31216FB37E00B22363 /* AdvancedVenueDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD4BB2F216FB37E00B22363 /* AdvancedVenueDetail.storyboard */; };
+		7FD4BB32216FB37E00B22363 /* AdvancedVenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD4BB30216FB37E00B22363 /* AdvancedVenueDetailViewController.swift */; };
+		7FD4BB34216FB3CB00B22363 /* AdvancedVenueDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD4BB33216FB3CB00B22363 /* AdvancedVenueDetailViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +111,8 @@
 		7F9AEDD2213BBC390092854F /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		7F9AEDD4213BBC390092854F /* VenueOutlineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueOutlineCell.xib; sourceTree = "<group>"; };
 		7F9AEDD5213BBC390092854F /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
-		7F9AEDD6213BBC390092854F /* VenueDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VenueDetail.storyboard; sourceTree = "<group>"; };
-		7F9AEDD7213BBC390092854F /* VenueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
+		7F9AEDD6213BBC390092854F /* SimpleVenueDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleVenueDetail.storyboard; sourceTree = "<group>"; };
+		7F9AEDD7213BBC390092854F /* SimpleVenueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleVenueDetailViewController.swift; sourceTree = "<group>"; };
 		7F9AEDD8213BBC390092854F /* RelatedVenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedVenueCell.swift; sourceTree = "<group>"; };
 		7F9AEDD9213BBC390092854F /* ReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		7F9AEDDA213BBC390092854F /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
@@ -139,7 +142,10 @@
 		7FC38D30213FA8BC009FCEB1 /* BTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTableViewCell.swift; sourceTree = "<group>"; };
 		7FC38D32213FA908009FCEB1 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		7FC38D34213FA917009FCEB1 /* TestTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableView.swift; sourceTree = "<group>"; };
-		7FC38D38213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		7FC38D38213FAC69009FCEB1 /* AdvancedVenueDetailViewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedVenueDetailViewStateTests.swift; sourceTree = "<group>"; };
+		7FD4BB2F216FB37E00B22363 /* AdvancedVenueDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AdvancedVenueDetail.storyboard; sourceTree = "<group>"; };
+		7FD4BB30216FB37E00B22363 /* AdvancedVenueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedVenueDetailViewController.swift; sourceTree = "<group>"; };
+		7FD4BB33216FB3CB00B22363 /* AdvancedVenueDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedVenueDetailViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +200,7 @@
 		7F9AEDC0213BBBA30092854F /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				7FC38D38213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift */,
+				7FC38D38213FAC69009FCEB1 /* AdvancedVenueDetailViewStateTests.swift */,
 				7F9AEDC3213BBBA30092854F /* Info.plist */,
 			);
 			path = DemoTests;
@@ -212,8 +218,11 @@
 		7F9AEDD3213BBC390092854F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7F9AEDD6213BBC390092854F /* VenueDetail.storyboard */,
-				7F9AEDD7213BBC390092854F /* VenueDetailViewController.swift */,
+				7F9AEDD6213BBC390092854F /* SimpleVenueDetail.storyboard */,
+				7F9AEDD7213BBC390092854F /* SimpleVenueDetailViewController.swift */,
+				7FD4BB2F216FB37E00B22363 /* AdvancedVenueDetail.storyboard */,
+				7FD4BB30216FB37E00B22363 /* AdvancedVenueDetailViewController.swift */,
+				7FD4BB33216FB3CB00B22363 /* AdvancedVenueDetailViewState.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -459,12 +468,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9AEDB7213BBBA30092854F /* LaunchScreen.storyboard in Resources */,
+				7FD4BB31216FB37E00B22363 /* AdvancedVenueDetail.storyboard in Resources */,
 				7F9AEDE8213BBC390092854F /* RelatedVenueCell.xib in Resources */,
 				7F9AEDE5213BBC390092854F /* ReviewCell.xib in Resources */,
 				7F9AEDE0213BBC390092854F /* VenueOutlineCell.xib in Resources */,
 				7F9AEDE9213BBC390092854F /* SectionHeaderCell.xib in Resources */,
 				7F9AEDB4213BBBA30092854F /* Assets.xcassets in Resources */,
-				7F9AEDE2213BBC390092854F /* VenueDetail.storyboard in Resources */,
+				7F9AEDE2213BBC390092854F /* SimpleVenueDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,11 +511,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9AEDE4213BBC390092854F /* RelatedVenueCell.swift in Sources */,
+				7FD4BB32216FB37E00B22363 /* AdvancedVenueDetailViewController.swift in Sources */,
 				7F9AEDCF213BBC280092854F /* CollectionViewFullWidthCell.swift in Sources */,
 				7F9AEDE1213BBC390092854F /* SectionHeaderCell.swift in Sources */,
 				7F9AEDDF213BBC390092854F /* Venue.swift in Sources */,
+				7FD4BB34216FB3CB00B22363 /* AdvancedVenueDetailViewState.swift in Sources */,
 				7F9AEDE7213BBC390092854F /* VenueOutlineCell.swift in Sources */,
-				7F9AEDE3213BBC390092854F /* VenueDetailViewController.swift in Sources */,
+				7F9AEDE3213BBC390092854F /* SimpleVenueDetailViewController.swift in Sources */,
 				7F9AEDE6213BBC390092854F /* ReviewCell.swift in Sources */,
 				7F9AEDAD213BBBA10092854F /* AppDelegate.swift in Sources */,
 				7F9AEDDE213BBC390092854F /* Review.swift in Sources */,
@@ -516,7 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC38D39213FAC69009FCEB1 /* VenuDetailViewControllerTests.swift in Sources */,
+				7FC38D39213FAC69009FCEB1 /* AdvancedVenueDetailViewStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

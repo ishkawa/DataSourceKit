@@ -132,7 +132,7 @@ struct VenueDetailViewState {
 }
 
 extension VenueDetailViewState: CellsDeclarator {
-    enum CellDeclaration {
+    enum CellDeclaration: Equatable {
         case outline(Venue)
         case sectionHeader(String)
         case review(Review)
@@ -192,8 +192,6 @@ CollectionViewDataSource has a type parameter named CellDeclaration too. If this
 
 ```swift
 final class VenueDetailViewController: UIViewController {
-    ...
-
     @IBOutlet private weak var collectionView: UICollectionView!
 
     private let dataSource = CollectionViewDataSource<VenueDetailViewState.CellDeclaration> { cellDeclaration in
@@ -209,6 +207,12 @@ final class VenueDetailViewController: UIViewController {
         }
     }
 
+    private var state = VenueDetailViewState() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -216,7 +220,7 @@ final class VenueDetailViewController: UIViewController {
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.dataSource = dataSource
 
-        dataSource.cellDeclarations = cellDeclarations
+        dataSource.cellDeclarations = state.cellDeclarations
     }
 }
 ```

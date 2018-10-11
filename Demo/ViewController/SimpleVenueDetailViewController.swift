@@ -1,5 +1,5 @@
 //
-//  VenueDetailViewController.swift
+//  SimpleVenueDetailViewController.swift
 //  Demo
 //
 //  Created by Yosuke Ishikawa on 2018/08/31.
@@ -9,7 +9,7 @@
 import UIKit
 import DataSourceKit
 
-final class VenueDetailViewController: UIViewController {
+final class SimpleVenueDetailViewController: UIViewController {
     var venue = Venue(photo: #imageLiteral(resourceName: "Kaminarimon_at_night"), name: "Kaminarimon")
     var reviews = [
         Review(authorImage: #imageLiteral(resourceName: "ishkawa"), authorName: "Yosuke Ishikawa", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
@@ -38,7 +38,7 @@ final class VenueDetailViewController: UIViewController {
     }
 }
 
-extension VenueDetailViewController: CellsDeclarator {
+extension SimpleVenueDetailViewController: CellsDeclarator {
     func declareCells(_ cell: (CellBinder) -> Void) {
         cell(VenueOutlineCell.makeBinder(value: venue))
         
