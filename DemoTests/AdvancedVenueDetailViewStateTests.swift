@@ -1,5 +1,5 @@
 //
-//  VenuDetailViewControllerTests.swift
+//  AdvancedVenueDetailViewStateTests.swift
 //  DemoTests
 //
 //  Created by Yosuke Ishikawa on 2018/09/05.
@@ -9,13 +9,13 @@
 import XCTest
 @testable import Demo
 
-class VenuDetailViewControllerTests: XCTestCase {
+class AdvancedVenueDetailViewStateTests: XCTestCase {
     func testEmptyRelatedVenues() {
         let venue = Venue(photo: nil, name: "Kaminarimon")
         let review1 = Review(authorImage: nil, authorName: "Yosuke Ishikawa", body: "Foo")
         let review2 = Review(authorImage: nil, authorName: "Masatake Yamoto", body: "Bar")
         
-        let data = VenueDetailViewController.Data(
+        let data = AdvancedVenueDetailViewState(
             venue: venue,
             reviews: [
                 review1,

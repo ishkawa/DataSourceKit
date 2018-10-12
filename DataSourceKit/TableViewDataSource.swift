@@ -41,3 +41,11 @@ open class TableViewDataSource<CellDeclaration>: NSObject, UITableViewDataSource
         return cell
     }
 }
+
+extension TableViewDataSource where CellDeclaration == CellBinder {
+    // Add meaningless parameter to avoid error `Members of constrained extensions
+    // cannot be declared @objc`, which is caused by collision to init() of NSObject.
+    public convenience init(binderFromBinder: @escaping (CellBinder) -> CellBinder = { $0 }) {
+        self.init(binderFromDeclaration: binderFromBinder)
+    }
+}
